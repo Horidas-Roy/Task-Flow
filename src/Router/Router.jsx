@@ -5,6 +5,12 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Resister from "../Pages/Resister/Resister";
 import Dashboard from "../MainLayOut/Dashboard";
+import CreateNewTask from "../Pages/Dashboard/CreateNewTask/CreateNewTask";
+import OnGoingList from "../Pages/Dashboard/OnGoingList/OnGoingList";
+import CompleteTask from "../Pages/Dashboard/CompleteTask/CompleteTask";
+import DragAndDrop from "../Pages/Dashboard/Drag and Drop/DragAndDrop";
+import PreviousTask from "../Pages/Dashboard/preViousTask/PreviousTask";
+import Profile from "../Pages/Dashboard/Profile/Profile";
 
 const router =createBrowserRouter([
     {
@@ -29,7 +35,33 @@ const router =createBrowserRouter([
     },
     {
         path:'dashboard',
-        element:<Dashboard/>
+        element:<Dashboard/>,
+        children:[
+            {
+                path:'createNewTask',
+                element:<CreateNewTask/>
+            },
+            {
+                path:'onGoingList',
+                element:<OnGoingList/>
+            },
+            {
+                path:'completeTask',
+                element:<CompleteTask/>
+            },
+            {
+                path:'dragAndDrop',
+                element:<DragAndDrop/>
+            },
+            {
+                path:'previousTask',
+                element:<PreviousTask/>
+            },
+            {
+                path:'profile',
+                element:<Profile/>
+            }
+        ]
     }
 ])
 
