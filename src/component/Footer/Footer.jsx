@@ -23,7 +23,7 @@ const Footer = () => {
                  <p className="text-sm">Need anything? Get in touch and we can help</p>
                </div>
             </div>
-            <hr />
+            <hr  className="mx-5"/>
             <div className="flex justify-between items-center px-20 py-5">
                <div className="flex gap-10 text-sm">
                    <h3>privacy policy</h3>

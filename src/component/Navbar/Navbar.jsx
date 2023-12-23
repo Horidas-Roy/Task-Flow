@@ -1,18 +1,33 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
 
 const Navbar = () => {
     const [toggle,setToggle]=useState(false)
+    const [background,setBackground]=useState(false)
 
      const navLinks=<>
-          <li>Home</li>
-          <li>Login</li>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/login'>Login</NavLink></li>
      </>
-     
+
+     useEffect(()=>{
+       const handleScroll=()=>{
+            const scrollY=window.scrollY
+            setBackground(scrollY>0)
+       }
+
+       window.addEventListener('scroll',handleScroll)
+
+       return ()=>{
+         window.removeEventListener('scroll',handleScroll)
+       }
+
+     },[])
+
     return (
-        <nav className={`${window.scrollTo(0,0) && 'bg-[#101644]'} w-full flex items-center py-5 fixed top-0 z-20 px-4`}>
+        <nav className={`${background && 'bg-[#FFF] shadow-lg'} w-full flex items-center py-5 fixed top-0 z-20 px-4`}>
       <div className='flex justify-between items-center w-full mx-auto'>
            <Link
            to='/'
@@ -22,7 +37,7 @@ const Navbar = () => {
            }}
            >
             {/* <img src={logo} alt='logo' className='h-9 w-9 object-contain'></img> */}
-            <p className='text-white text-lg font-bold cursor-pointer flex gap-2'>Task<span className=''>Flow</span></p>
+            <p className={`text-[#061938] text-lg font-bold cursor-pointer flex gap-2`}>Task<span className=''>Flow</span></p>
            </Link>
            <ul className='list-none hidden md:flex flex-row gap-10'>
               {navLinks}
