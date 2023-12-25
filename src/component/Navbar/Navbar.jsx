@@ -1,15 +1,29 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMenuSharp } from "react-icons/io5";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const [toggle,setToggle]=useState(false)
     const [background,setBackground]=useState(false)
+    const navigate=useNavigate()
+
+    const {user,logOut}=useContext(AuthContext)
+
+    const handleLogOut=()=>{
+       logOut()
+       navigate('/')
+    }
 
      const navLinks=<>
           <li><NavLink to='/'>Home</NavLink></li>
-          <li><NavLink to='/login'>Login</NavLink></li>
+          { user ? <>
+            <li><button onClick={()=>handleLogOut()}>LogOut</button></li>
+            <li><NavLink to='/dashboard/profile'>Profile</NavLink></li>
+          </>
+            :<li><NavLink to='/login'>Login</NavLink></li>
+          }
      </>
 
      useEffect(()=>{

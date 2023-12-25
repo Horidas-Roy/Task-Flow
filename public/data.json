@@ -1,0 +1,123 @@
+[
+    {
+      "task": "Complete Project Proposal",
+      "deadline": "2023-01-15",
+      "priority": "High",
+      "status": "Incomplete",
+      "description": "Finish drafting the project proposal document.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Read Chapter 5 of Business Book",
+      "deadline": null,
+      "priority": "Moderate",
+      "status": "Incomplete",
+      "description": "Read and summarize Chapter 5 of the assigned business book.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Exercise for 30 Minutes",
+      "deadline": null,
+      "priority": "Low",
+      "status": "Incomplete",
+      "description": "Engage in a 30-minute exercise routine.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Call Client for Follow-up",
+      "deadline": null,
+      "priority": "Moderate",
+      "status": "Incomplete",
+      "description": "Reach out to the client for a follow-up discussion.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Grocery Shopping",
+      "deadline": null,
+      "priority": "Low",
+      "status": "Incomplete",
+      "description": "Buy essential groceries for the week.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Attend Team Meeting",
+      "deadline": "2023-01-20T10:00:00",
+      "priority": "Low",
+      "status": "Ongoing",
+      "description": "Participate in the scheduled team meeting at 10:00 AM.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Submit Expense Report",
+      "deadline": "2023-01-18",
+      "priority": "High",
+      "status": "Ongoing",
+      "description": "Compile and submit the expense report for reimbursement.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Review Code Changes",
+      "deadline": "2023-01-25",
+      "priority": "High",
+      "status": "Ongoing",
+      "description": "Thoroughly review and provide feedback on recent code changes.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Prepare Presentation for Meeting",
+      "deadline": "2023-01-22",
+      "priority": "Moderate",
+      "status": "Ongoing",
+      "description": "Create a presentation for the upcoming team meeting.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Write Blog Post",
+      "deadline": "2023-02-01",
+      "priority": "Moderate",
+      "status": "Ongoing",
+      "description": "Draft a blog post on a relevant topic for publication.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Attend Team Meeting",
+      "deadline": "2023-01-15",
+      "priority": "Low",
+      "status": "Completed",
+      "description": "Successfully attended the team meeting on January 15th.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Submit Expense Report",
+      "deadline": "2023-01-18",
+      "priority": "High",
+      "status": "Completed",
+      "description": "Expense report submitted and awaiting processing.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Grocery Shopping",
+      "deadline": null,
+      "priority": "Low",
+      "status": "Completed",
+      "description": "Completed the grocery shopping for the week.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Read Chapter 5 of Business Book",
+      "deadline": null,
+      "priority": "Moderate",
+      "status": "Completed",
+      "description": "Read and summarized Chapter 5 of the business book.",
+      "email": "royhoridas64@gmail.com"
+    },
+    {
+      "task": "Exercise for 30 Minutes",
+      "deadline": null,
+      "priority": "Low",
+      "status": "Completed",
+      "description": "Successfully completed a 30-minute exercise routine.",
+      "email": "royhoridas64@gmail.com"
+    }
+  ]
+  

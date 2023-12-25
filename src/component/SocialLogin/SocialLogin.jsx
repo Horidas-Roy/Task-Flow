@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -7,11 +8,13 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const SocialLogin = () => {
 
     const {googleSignIn,githubSignIn}=useContext(AuthContext)
+    const navigate=useNavigate()
      
    const handleGoogle=()=>{
        googleSignIn()
        .then(result=>{
           console.log(result.user)
+          navigate('/dashboard/profile')
        })
        .catch(error=>{
            console.log(error)
@@ -22,6 +25,7 @@ const SocialLogin = () => {
         githubSignIn()
         .then(result=>{
              console.log(result.user)
+             navigate('/dashboard/profile')
         })
         .catch(error=>{
             console.log(error)

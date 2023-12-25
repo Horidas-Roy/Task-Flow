@@ -8,9 +8,9 @@ import Dashboard from "../MainLayOut/Dashboard";
 import CreateNewTask from "../Pages/Dashboard/CreateNewTask/CreateNewTask";
 import OnGoingList from "../Pages/Dashboard/OnGoingList/OnGoingList";
 import CompleteTask from "../Pages/Dashboard/CompleteTask/CompleteTask";
-import DragAndDrop from "../Pages/Dashboard/Drag and Drop/DragAndDrop";
 import PreviousTask from "../Pages/Dashboard/preViousTask/PreviousTask";
 import Profile from "../Pages/Dashboard/Profile/Profile";
+import DragAndDrop from "../Pages/Dashboard/TaskManagement/DragAndDrop";
 
 const router =createBrowserRouter([
     {
@@ -60,7 +60,7 @@ const router =createBrowserRouter([
             {
                 path:'profile',
                 element:<Profile/>
-            }
+            },
         ]
     }
 ])

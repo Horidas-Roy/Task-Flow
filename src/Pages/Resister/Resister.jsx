@@ -1,31 +1,63 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+// import axios from "axios";
+
+// const ImageHostingKey=import.meta.env.VITE_ImageHostingKey
+
+// const image_hosting_api=`https://api.imgbb.com/1/upload?key=${ImageHostingKey}`
 
 const Resister = () => {
 
-    const {createUser}=useContext(AuthContext)
+    const {createUser,updateUserProfile,logOut}=useContext(AuthContext)
+    const navigate=useNavigate()
     
 
-    const handleSubmit=(e)=>{
+    const handleSubmit=async(e)=>{
         e.preventDefault();
         const form=e.target;
         const name=form.name.value;
         const email=form.email.value;
         const profilePicture=form.profilePicture.value;
         const password=form.password.value;
+      
+        // const res=await axios.post(image_hosting_api,profilePicture,{
+        //   headers:{
+        //     'Content-Type':'multipart/form-data'
+        //   }
+        // })
+        // console.log(res.data,name,email,password)
 
-        console.log(name,email,profilePicture,password)
 
-       createUser(email,password)
-       .then(result=>{
-           console.log(result.user)
-       })
-       .catch(error=>{
-           console.log(error)
-       })
+          createUser(email,password)
+          .then(result=>{
+              console.log(result.user)
+              updateUserProfile(name,profilePicture)
+              .then(()=>{
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "Your resistration has been completed",
+                  showConfirmButton: false,
+                  timer: 1500
+                });
+                logOut()
+                 navigate('/login')
+              })
+              .catch(error=>{
+                  console.log(error)
+              })
+
+          })
+          .catch(error=>{
+              console.log(error)
+          })
+        }
+
+      
          
-    }
+    
     return (
         <div className="hero min-h-screen bg-base-200 w-full pt-20">
         <div className="hero-content flex-col lg:flex-row-reverse w-full">
@@ -57,13 +89,13 @@ const Resister = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Profile picture</span>
+                  <span className="label-text">PhotoURL</span>
                 </label>
                 <input
-                  type="file"
+                  type="text"
                   name="profilePicture"
-                  placeholder="profile picture"
-                  className="justify-center items-center"
+                  placeholder="profile picture" 
+                  className="input input-bordered"
                   required
                 />
               </div>
